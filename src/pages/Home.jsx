@@ -147,7 +147,7 @@ const Home =() => {
                       {project.title}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                      {project.description}
+                      {project.idea}
                     </p>
                     
                     {/* Tags */}
