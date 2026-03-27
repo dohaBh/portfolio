@@ -33,6 +33,7 @@ export const featuredProjects = [
       "/images/SQLIAPP/bordm.png",
     ],
     github: "https://github.com/dohaBh/SQLIAPP.git",
+    demo: "https://drive.google.com/file/d/1ubjsa1kuU-swfVG8wA0XrEQ7gNk72dwA/view?usp=share_link",
   },
   {
     id: 2,
@@ -59,6 +60,7 @@ export const featuredProjects = [
       "/images/Tasky/taskdash.png",
     ],
     github: "https://github.com/dohaBh/TASKY.git",
+    demo: "https://drive.google.com/your-link-here",
   },
   {
     id: 3,
@@ -84,6 +86,7 @@ export const featuredProjects = [
       "/images/Symfony/profile.png",
     ],
     github: "https://github.com/dohaBh/CLUBGIMANAGEMENT.git",
+    demo: "https://drive.google.com/file/d/1jD3utg2uIx8LyhAe2Kv2I0y0uFn9x0z9/view?usp=sharing",
   },
   {
     id: 4,
@@ -109,6 +112,7 @@ export const featuredProjects = [
       "/images/Eldra/8.jpeg",
       "/images/Eldra/10.jpeg",
     ],
-    github: "https://github.com/dohaBh/ELDRAMOBILEAPP.git",
+    github: "https://github.com/douae-ba/Eldra.git",
+    demo: "https://drive.google.com/your-link-here",
   },
 ];

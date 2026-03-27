@@ -1,3 +1,4 @@
+// Projects.js (Component)
 import React, { useEffect, useRef, useState } from "react";
 import { featuredProjects } from "../data/projects";
 
@@ -238,22 +239,80 @@ function ProjectCard({ project, index }) {
             </div>
           </Section>
 
-          <div style={{ paddingLeft: "14px" }}>
+          {/* Action Buttons Container */}
+          <div style={{ paddingLeft: "14px", display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1rem" }}>
+            {/* Demo Button - Will appear for all projects */}
+            <a
+              href={project.demo || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn"
+              style={{
+                display: "inline-block",
+                padding: "12px 32px",
+                background: C.header,
+                color: "#faf7f1",
+                textDecoration: "none",
+                fontSize: "0.9rem",
+                letterSpacing: "0.04em",
+                position: "relative",
+                overflow: "hidden",
+                border: `1px solid ${C.header}`,
+                cursor: "pointer",
+                transition: "letter-spacing 0.3s",
+              }}
+              onMouseEnter={(e) => {
+                const fill = e.currentTarget.querySelector('.cta-fill');
+                if (fill) fill.style.transform = 'translateX(0)';
+              }}
+              onMouseLeave={(e) => {
+                const fill = e.currentTarget.querySelector('.cta-fill');
+                if (fill) fill.style.transform = 'translateX(-101%)';
+              }}
+            >
+              <span className="cta-fill" style={{
+                position: "absolute",
+                inset: 0,
+                background: C.accent,
+                transform: "translateX(-101%)",
+                transition: "transform 0.35s cubic-bezier(.22,1,.36,1)",
+              }} />
+              <span style={{ position: "relative", zIndex: 1 }}>🎬 Live Demo →</span>
+            </a>
+            
+            {/* GitHub Button */}
             <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn"
               style={{
-                display: "inline-block", padding: "12px 32px",
-                background: C.header, color: "#faf7f1",
-                textDecoration: "none", fontSize: "0.9rem",
-                letterSpacing: "0.04em", position: "relative",
-                overflow: "hidden", border: `1px solid ${C.header}`,
+                display: "inline-block",
+                padding: "12px 32px",
+                background: C.header,
+                color: "#faf7f1",
+                textDecoration: "none",
+                fontSize: "0.9rem",
+                letterSpacing: "0.04em",
+                position: "relative",
+                overflow: "hidden",
+                border: `1px solid ${C.header}`,
+                cursor: "pointer",
+                transition: "letter-spacing 0.3s",
+              }}
+              onMouseEnter={(e) => {
+                const fill = e.currentTarget.querySelector('.cta-fill');
+                if (fill) fill.style.transform = 'translateX(0)';
+              }}
+              onMouseLeave={(e) => {
+                const fill = e.currentTarget.querySelector('.cta-fill');
+                if (fill) fill.style.transform = 'translateX(-101%)';
               }}
             >
               <span className="cta-fill" style={{
-                position: "absolute", inset: 0, background: C.accent,
+                position: "absolute",
+                inset: 0,
+                background: C.accent,
                 transform: "translateX(-101%)",
                 transition: "transform 0.35s cubic-bezier(.22,1,.36,1)",
               }} />
@@ -278,7 +337,6 @@ const Projects = () => {
         .img-thumb:hover .thumb-img    { transform: scale(1.08); }
         .img-thumb:hover .thumb-overlay{ opacity: 1 !important; }
         .cta-btn:hover .cta-fill       { transform: translateX(0) !important; }
-        .cta-btn                       { transition: letter-spacing 0.3s; }
         .cta-btn:hover                 { letter-spacing: 0.07em !important; }
       `}</style>
 
